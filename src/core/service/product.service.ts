@@ -1,18 +1,18 @@
 import { NotImplementedException } from '@nestjs/common';
 import { IModelService } from '../interface/model.service.interface';
-import { ModelBase } from 'src/model/base';
+import { ModelProduct } from 'src/model/product';
 
 export class ProductService implements IModelService {
-	getAll(): ModelBase[] {
+	getAll(): ModelProduct[] {
 		throw new NotImplementedException();
 	}
-	getById(id: number): ModelBase {
+	getById(id: number): ModelProduct {
 		throw new NotImplementedException();
 	}
-	post(id: number, model: ModelBase): ModelBase {
+	post(id: number, model: ModelProduct): ModelProduct {
 		throw new NotImplementedException();
 	}
-	delete(id: number): ModelBase {
+	delete(id: number): ModelProduct {
 		throw new NotImplementedException();
 	}
 }
