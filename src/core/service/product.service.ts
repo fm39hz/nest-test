@@ -1,8 +1,8 @@
 import { NotImplementedException } from '@nestjs/common';
-import { CrudModelService } from '../interface/model.interface';
+import { IModelService } from '../interface/model.service.interface';
 import { ModelBase } from 'src/model/base';
 
-export class ProductService implements CrudModelService {
+export class ProductService implements IModelService {
 	get(): ModelBase[] {
 		throw new NotImplementedException();
 	}
