@@ -1,4 +1,4 @@
-export abstract class ModelBase {
+export abstract class BaseModel {
 	id: number;
 	constructor(id: number) {
 		this.id = id;

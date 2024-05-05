@@ -1,6 +1,6 @@
-import { ModelBase } from './base';
+import { BaseModel } from './base.model';
 
-export class ModelProduct extends ModelBase {
+export class ProductModel extends BaseModel {
 	name: string;
 	constructor(id: number, name: string) {
 		super(id);
