@@ -385,6 +385,11 @@ Icon
 .VolumeIcon.icns
 .com.apple.timemachine.donotpresent
 
+# Mongodb
+.mongodb/*
+!.mongodb/docker-compose.yaml
+!.mongodb/config
+
 # Directories potentially created on remote AFP share
 .AppleDB
 .AppleDesktop
