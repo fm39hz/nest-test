@@ -1,8 +1,8 @@
-import { BaseModel } from 'src/model/base.model';
+import { Base } from '../model/base.model';
 
 export interface IModelService {
-	getAll(): BaseModel[];
-	getById(id: number): BaseModel;
-	post(id: number, model: BaseModel): BaseModel;
-	delete(id: number): BaseModel;
+	getAll(): Promise<Base[]>;
+	getById(id: number): Promise<Base>;
+	post(id: number, model: Base): Promise<Base>;
+	delete(id: number): Promise<Base>;
 }
