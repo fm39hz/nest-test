@@ -1,9 +1,9 @@
-import { Prop, Schema } from '@nestjs/mongoose';
+import { Prop } from '@nestjs/mongoose';
 
 export abstract class Base {
-	constructor(id: number) {
+	constructor(id: string) {
 		this.id = id;
 	}
-	@Prop([Number])
-	id: number;
+	@Prop([String])
+	id: string;
 }

@@ -6,7 +6,7 @@ export type ProductDocument = HydratedDocument<Product>;
 
 @Schema()
 export class Product extends Base {
-	constructor(id: number, name: string) {
+	constructor(id: string, name: string) {
 		super(id);
 		this.name = name;
 	}

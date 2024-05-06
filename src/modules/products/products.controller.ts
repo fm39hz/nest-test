@@ -11,15 +11,23 @@ export class ProductController {
 		return await this.service.getAll();
 	}
 	@Get(':id')
-	async getById(@Param('id') id: number): Promise<Product> {
+	async getById(@Param('id') id: string): Promise<Product> {
 		return await this.service.getById(id);
 	}
+
+	@Post()
+	async create(@Body() product: Product): Promise<Product> {
+		return await this.create(product);
+	}
 	@Post(':id')
-	post(@Param('id') id: number, @Body() product: Product): Product {
-		return this.post(id, product);
+	async post(
+		@Param('id') id: number,
+		@Body() product: Product,
+	): Promise<Product> {
+		return await this.post(id, product);
 	}
 	@Delete(':id')
-	async delete(@Param('id') id: number): Promise<Product> {
-		return this.service.delete(id);
+	async delete(@Param('id') id: string): Promise<Product> {
+		return await this.service.delete(id);
 	}
 }
